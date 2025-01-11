@@ -1,0 +1,45 @@
+{
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.6",
+    "body": [
+        {
+            "type": "Image",
+            "url": "${albumArtUrl}",
+            "size": "Medium",
+            "style": "Person"
+        },
+        {
+            "type": "TextBlock",
+            "text": "${trackName}",
+            "weight": "Bolder",
+            "wrap": true
+        },
+        {
+            "type": "TextBlock",
+            "text": "${artistName}",
+            "isSubtle": true,
+            "wrap": true
+        },
+        {
+            "type": "ActionSet",
+            "actions": [
+                {
+                    "type": "Action.Execute",
+                    "title": "⏮️",
+                    "id": "previous"
+                },
+                {
+                    "type": "Action.Execute",
+                    "title": "${isPlaying ? '⏸️' : '▶️'}",
+                    "id": "playPause"
+                },
+                {
+                    "type": "Action.Execute",
+                    "title": "⏭️",
+                    "id": "next"
+                }
+            ]
+        }
+    ]
+}
