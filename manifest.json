@@ -1,0 +1,30 @@
+{
+    "name": "PWAmp",
+    "description": "A music player app",
+    "icons": [
+        {
+            "src": "img/dinosaur.png",
+            "sizes": "512x512"
+        }
+    ],
+    "widgets": [
+        {
+            "name": "PWAmp mini player",
+            "description": "widget to control the PWAmp music player",
+            "tag": "pwamp",
+            "template": "pwamp-template",
+            "ms_ac_template": "widgets/mini-player-template.json",
+            "data": "widgets/mini-player-data.json",
+            "type": "application/json",
+            "screenshots": [
+                {
+                    "src": "./widgets-example-screenshot.png",
+                    "sizes": "302x306",
+                    "label": "The PWAmp mini-player widget"
+                }
+            ],
+            "auth": false,
+            "update": 86400
+        }
+    ]
+}
