@@ -13,7 +13,7 @@
             "description": "widget to control the PWAmp music player",
             "tag": "pwamp",
             "template": "pwamp-template",
-            "ms_ac_template": "widgets/mini-player-template.json",
+            "ms_ac_template": "https://github.com/NumeroQuadro/goofy-ahh-spotify-plugin/blob/master/widgets/mini-player-template.json",
             "data": "widgets/mini-player-data.json",
             "type": "application/json",
             "screenshots": [

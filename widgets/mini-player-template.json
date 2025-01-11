@@ -6,8 +6,7 @@
         {
             "type": "Image",
             "url": "${albumArtUrl}",
-            "size": "Medium",
-            "style": "Person"
+            "size": "Medium"
         },
         {
             "type": "TextBlock",
@@ -27,17 +26,20 @@
                 {
                     "type": "Action.Execute",
                     "title": "⏮️",
-                    "id": "previous"
+                    "id": "previous",
+                    "verb": "previous-song"
                 },
                 {
                     "type": "Action.Execute",
-                    "title": "${isPlaying ? '⏸️' : '▶️'}",
-                    "id": "playPause"
+                    "title": "▶️",
+                    "id": "playPause",
+                    "verb": "resume-song"
                 },
                 {
                     "type": "Action.Execute",
                     "title": "⏭️",
-                    "id": "next"
+                    "id": "next",
+                    "verb": "next-song"
                 }
             ]
         }
