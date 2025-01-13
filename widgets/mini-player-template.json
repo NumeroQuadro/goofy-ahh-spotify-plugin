@@ -39,7 +39,7 @@
                 },
                 {
                     "type": "Action.Execute",
-                    "title": "${isPlaying ? 'https://raw.githubusercontent.com/NumeroQuadro/goofy-ahh-spotify-plugin/master/img/playback-icons/play.png' : 'https://raw.githubusercontent.com/NumeroQuadro/goofy-ahh-spotify-plugin/master/img/playback-icons/pause.png'}",
+                    "iconUrl": "${isPlaying ? https://raw.githubusercontent.com/NumeroQuadro/goofy-ahh-spotify-plugin/master/img/playback-icons/play.png : https://raw.githubusercontent.com/NumeroQuadro/goofy-ahh-spotify-plugin/master/img/playback-icons/pause.png}",
                     "verb": "toggle-playback",
                     "role": "Button"
                 },
