@@ -3,7 +3,7 @@
     "description": "Spotify Player",
     "icons": [
         {
-            "src": "https://raw.githubusercontent.com/NumeroQuadro/goofy-ahh-spotify-plugin/master/img/icon.png",
+            "src": "https://raw.githubusercontent.com/NumeroQuadro/goofy-ahh-spotify-plugin/master/img/dinosaur.png",
             "sizes": "640x640",
             "type": "image/png"
         }

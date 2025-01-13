@@ -4,19 +4,50 @@
     "version": "1.6",
     "body": [
         {
-            "type": "ImageSet",
-            "images": [
+            "type": "Container",
+            "items": [
                 {
-                    "type": "Image",
-                    "size": "Medium",
-                    "url": "${url}"
+                    "type": "TextBlock",
+                    "text": "${songTitle}",
+                    "weight": "Bolder",
+                    "size": "Large",
+                    "wrap": true
+                },
+                {
+                    "type": "TextBlock",
+                    "text": "${artistName}",
+                    "spacing": "Small",
+                    "isSubtle": true,
+                    "wrap": true
                 }
             ]
         },
         {
-            "type": "TextBlock",
-            "text": "${text}",
-            "wrap": true
+            "type": "Image",
+            "url": "albumArt",
+            "size": "Medium",
+            "altText": "Album Art",
+            "isVisible": "${host.widgetSize != 'small'}"
+        },
+        {
+            "type": "ActionSet",
+            "actions": [
+                {
+                    "type": "Action.Execute",
+                    "title": "⏮",
+                    "verb": "previous-song"
+                },
+                {
+                    "type": "Action.Execute",
+                    "title": "${isPlaying ? '⏸️' : '▶️'}",
+                    "verb": "toggle-playback"
+                },
+                {
+                    "type": "Action.Execute",
+                    "title": "⏭",
+                    "verb": "next-song"
+                }
+            ]
         }
     ]
 }
