@@ -4,6 +4,16 @@
     "version": "1.6",
     "body": [
         {
+            "type": "ImageSet",
+            "images": [
+                {
+                    "type": "Image",
+                    "size": "Medium",
+                    "url": "${url}"
+                }
+            ]
+        },
+        {
             "type": "TextBlock",
             "text": "${text}",
             "wrap": true
