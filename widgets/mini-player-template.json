@@ -4,11 +4,8 @@
     "version": "1.6",
     "body": [
         {
-            "type": "${image}"
-        },
-        {
             "type": "TextBlock",
-            "text": "ahahahahahaha",
+            "text": "${text}",
             "wrap": true
         }
     ]
