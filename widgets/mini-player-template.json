@@ -40,14 +40,14 @@
                 },
                 {
                     "type": "Action.Execute",
-                    "iconUrl": "https://raw.githubusercontent.com/NumeroQuadro/goofy-ahh-spotify-plugin/master/img/playback-icons/spotify-next.svg",
+                    "iconUrl": "https://raw.githubusercontent.com/NumeroQuadro/goofy-ahh-spotify-plugin/master/img/playback-icons/play.png",
                     "verb": "toggle-playback",
                     "role": "Button"
                 },
                 {
                     "type": "Action.Execute",
                     "verb": "next-song",
-                    "iconUrl": "https://raw.githubusercontent.com/NumeroQuadro/goofy-ahh-spotify-plugin/master/img/playback-icons/right-arrow.png",
+                    "iconUrl": "https://raw.githubusercontent.com/NumeroQuadro/goofy-ahh-spotify-plugin/master/img/playback-icons/spotify-next.svg",
                     "role": "Button"
                 }
             ]
