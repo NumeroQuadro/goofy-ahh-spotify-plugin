@@ -9,8 +9,8 @@
                 {
                     "type": "TextBlock",
                     "text": "${songTitle}",
-                    "weight": "Bolder",
-                    "size": "Large",
+                    "weight": "bolder",
+                    "size": "large",
                     "wrap": true
                 },
                 {
