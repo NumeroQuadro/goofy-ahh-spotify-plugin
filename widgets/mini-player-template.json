@@ -44,7 +44,7 @@
                 },
                 {
                     "type": "Action.Execute",
-                    "iconUrl": "https://raw.githubusercontent.com/NumeroQuadro/goofy-ahh-spotify-plugin/master/img/playback-icons/play.png",
+                    "iconUrl": "https://raw.githubusercontent.com/NumeroQuadro/goofy-ahh-spotify-plugin/master/img/playback-icons/spotify-playing.svg",
                     "verb": "toggle-playback",
                     "role": "Button"
                 },
