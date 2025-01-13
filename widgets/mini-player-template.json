@@ -9,8 +9,8 @@
                 {
                     "type": "TextBlock",
                     "text": "${songTitle}",
-                    "weight": "bolder",
-                    "size": "large",
+                    "weight": "Bolder",
+                    "size": "Large",
                     "wrap": true
                 },
                 {
@@ -33,18 +33,23 @@
             "actions": [
                 {
                     "type": "Action.Execute",
-                    "title": "⏮",
-                    "verb": "previous-song"
+                    "verb": "previous-song",
+                    "iconUrl": "https://raw.githubusercontent.com/NumeroQuadro/goofy-ahh-spotify-plugin/master/img/playback-icons/previous-song.png",
+                    "role": "Button",
+                    "isEnabled": false
                 },
                 {
                     "type": "Action.Execute",
                     "title": "${isPlaying ? '⏸️' : '▶️'}",
-                    "verb": "toggle-playback"
+                    "verb": "toggle-playback",
+                    "role": "Button"
                 },
                 {
                     "type": "Action.Execute",
-                    "title": "⏭",
-                    "verb": "next-song"
+                    "verb": "next-song",
+                    "iconUrl": "https://raw.githubusercontent.com/NumeroQuadro/goofy-ahh-spotify-plugin/master/img/playback-icons/next-button.png",
+                    "isEnabled": false,
+                    "role": "Button"
                 }
             ]
         }
