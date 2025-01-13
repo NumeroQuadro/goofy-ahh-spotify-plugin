@@ -1,15 +1,18 @@
 {
-    "name": "The Greatest Spotify Player Ever",
-    "description": "The Greatest Spotify Player Ever",
+    "name": "goofy ahh spotify widget",
+    "description": "Spotify Player",
     "icons": [
         {
             "src": "https://raw.githubusercontent.com/NumeroQuadro/goofy-ahh-spotify-plugin/master/img/dinosaur.png",
-            "sizes": "512x512"
+            "sizes": "512x512",
+            "type": "image/png"
         }
     ],
+    "start_url": "/",
+    "display": "standalone",
     "widgets": [
         {
-            "name": "goofy ahh spotify widget",
+            "name": "Now playing",
             "description": "widget to control the Spotify music player",
             "tag": "spotify",
             "ms_ac_template": "https://raw.githubusercontent.com/NumeroQuadro/goofy-ahh-spotify-plugin/master/widgets/mini-player-template.json",
