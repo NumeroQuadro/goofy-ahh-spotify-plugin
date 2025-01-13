@@ -26,8 +26,7 @@
             "type": "Image",
             "url": "albumArt",
             "size": "Medium",
-            "altText": "Album Art",
-            "isVisible": "${host.widgetSize != 'small'}"
+            "altText": "Album Art"
         },
         {
             "type": "ActionSet",
