@@ -12,7 +12,6 @@
             "name": "goofy ahh spotify widget",
             "description": "widget to control the Spotify music player",
             "tag": "spotify",
-            "template": "spotify-template",
             "ms_ac_template": "https://raw.githubusercontent.com/NumeroQuadro/goofy-ahh-spotify-plugin/master/widgets/mini-player-template.json",
             "data": "https://raw.githubusercontent.com/NumeroQuadro/goofy-ahh-spotify-plugin/master/widgets/mini-player-data.json",
             "type": "application/json",

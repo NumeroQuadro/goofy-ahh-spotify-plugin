@@ -26,7 +26,7 @@ self.addEventListener("activate", event => {
 
 async function updateWidgets() {
   // Get the widget that match the tag defined in the web app manifest.
-  const widget = await self.widgets.getByTag("pwamp");
+  const widget = await self.widgets.getByTag("spotify");
   if (!widget) {
     return;
   }

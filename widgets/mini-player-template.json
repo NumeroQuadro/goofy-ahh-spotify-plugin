@@ -5,6 +5,11 @@
     "body": [
         {
             "type": "${image}"
+        },
+        {
+            "type": "TextBlock",
+            "text": "ahahahahahaha",
+            "wrap": true
         }
     ]
 }
