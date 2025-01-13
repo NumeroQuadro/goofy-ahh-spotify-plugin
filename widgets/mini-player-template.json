@@ -23,14 +23,14 @@
                     "wrap": true,
                     "horizontalAlignment": "Center"
                 }
-            ]
+            ],
+            "spacing": "None"
         },
         {
             "type": "Image",
             "url": "${albumArt}",
             "size": "Large",
             "altText": "Album Art",
-            "spacing": "Small",
             "horizontalAlignment": "Center"
         },
         {
@@ -48,10 +48,12 @@
                             "altText": "Previous",
                             "selectAction": {
                                 "type": "Action.Execute",
-                                "verb": "previous-song"
+                                "verb": "previous-song",
+                                "role": "Button"
                             }
                         }
-                    ]
+                    ],
+                    "horizontalAlignment": "Center"
                 },
                 {
                     "type": "Column",
@@ -63,12 +65,12 @@
                             "altText": "Play/Pause",
                             "selectAction": {
                                 "type": "Action.Execute",
-                                "verb": "toggle-playback"
-                            },
-                            "horizontalAlignment": "Center",
-                            "spacing": "Small"
+                                "verb": "toggle-playback",
+                                "role": "Button"
+                            }
                         }
-                    ]
+                    ],
+                    "horizontalAlignment": "Center"
                 },
                 {
                     "type": "Column",
@@ -80,11 +82,13 @@
                             "altText": "Next",
                             "selectAction": {
                                 "type": "Action.Execute",
-                                "verb": "next-song"
+                                "verb": "next-song",
+                                "role": "Button"
                             },
                             "size": "Small"
                         }
-                    ]
+                    ],
+                    "horizontalAlignment": "Center"
                 }
             ]
         }
