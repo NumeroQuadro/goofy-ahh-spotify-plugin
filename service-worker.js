@@ -1,17 +1,3 @@
-// service-worker.js
-
-// Define widgets
-const widgets = [
-  {
-    tag: "pwamp", // The tag matches the widget's manifest tag
-    template: "https://raw.githubusercontent.com/NumeroQuadro/goofy-ahh-spotify-plugin/master/widgets/mini-player-template.json",
-    data: "https://raw.githubusercontent.com/NumeroQuadro/goofy-ahh-spotify-plugin/master/widgets/mini-player-data.json",
-    type: "application/json",
-    update: 86400, // Frequency to update widget data in seconds
-    auth: false, // No authentication required
-  },
-];
-
 // Listen to the widgetinstall event.
 self.addEventListener("widgetinstall", event => {
   // The widget just got installed, render it using renderWidget.
@@ -52,6 +38,17 @@ async function updateWidgets() {
   // Render the widget with the template and data.
   await self.widgets.updateByTag(widget.definition.tag, { template, data });
 }
+
+self.addEventListener('widgetclick', (event) => {
+  switch (event.action) {
+    case 'previous-song':
+      // Application logic to play the previous song...
+      break;
+    case 'next-song':
+      // Application logic to play the next song...
+      break;
+  }
+});
 
 self.addEventListener("widgetinstall", event => {
   event.waitUntil(onWidgetInstall(event.widget));
@@ -106,14 +103,3 @@ async function updateWidget(widget) {
   // Render the widget with the template and data.
   await self.widgets.updateByTag(widget.definition.tag, { template, data });
 }
-
-self.addEventListener('widgetclick', (event) => {
-  switch (event.action) {
-    case 'previous-song':
-      console.log('prev song clicked');
-      break;
-    case 'next-song':
-      console.log('next-song clicked');
-      break;
-  }
-});

@@ -12,7 +12,7 @@
             "spacing": "Large",
             "weight": "Bolder",
             "horizontalAlignment": "Center",
-            "text": "${song}, by ${artist}",
+            "text": "${song}, by ${artist}"
         }
     ],
     "actions": [
