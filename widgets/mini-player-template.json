@@ -1,32 +1,10 @@
 {
     "type": "AdaptiveCard",
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.6",
     "body": [
         {
-            "type": "TextBlock",
-            "size": "Medium",
-            "text": "Now playing...",
-            "horizontalAlignment": "Center"
-        },
-        {
-            "type": "TextBlock",
-            "spacing": "Large",
-            "weight": "Bolder",
-            "horizontalAlignment": "Center",
-            "text": "${song}, by ${artist}"
+            "type": "${image}"
         }
-    ],
-    "actions": [
-        {
-            "type": "Action.Execute",
-            "title": "Previous",
-            "verb": "previous-song"
-        },
-        {
-            "type": "Action.Execute",
-            "title": "Next",
-            "verb": "next-song"
-        }
-    ],
-    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
-    "version": "1.5"
+    ]
 }
