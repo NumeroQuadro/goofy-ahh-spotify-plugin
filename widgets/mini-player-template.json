@@ -11,15 +11,17 @@
                     "text": "${songTitle}",
                     "weight": "Bolder",
                     "size": "Large",
-                    "wrap": true
+                    "wrap": true,
+                    "horizontalAlignment": "Center"
                 },
                 {
                     "type": "TextBlock",
                     "text": "${artistName}",
                     "spacing": "Small",
-                    "size": "Large",
+                    "size": "Default",
                     "isSubtle": true,
-                    "wrap": true
+                    "wrap": true,
+                    "horizontalAlignment": "Center"
                 }
             ]
         },
@@ -27,7 +29,9 @@
             "type": "Image",
             "url": "${albumArt}",
             "size": "Large",
-            "altText": "Album Art"
+            "altText": "Album Art",
+            "spacing": "Small",
+            "horizontalAlignment": "Center"
         },
         {
             "type": "ActionSet",
@@ -50,7 +54,8 @@
                     "iconUrl": "https://raw.githubusercontent.com/NumeroQuadro/goofy-ahh-spotify-plugin/master/img/playback-icons/spotify-next.svg",
                     "role": "Button"
                 }
-            ]
+            ],
+            "horizontalAlignment": "Center"
         }
     ]
 }
