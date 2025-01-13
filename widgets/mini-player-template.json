@@ -17,6 +17,7 @@
                     "type": "TextBlock",
                     "text": "${artistName}",
                     "spacing": "Small",
+                    "size": "Large",
                     "isSubtle": true,
                     "wrap": true
                 }
@@ -25,7 +26,7 @@
         {
             "type": "Image",
             "url": "${albumArt}",
-            "size": "Medium",
+            "size": "Large",
             "altText": "Album Art"
         },
         {
@@ -34,7 +35,7 @@
                 {
                     "type": "Action.Execute",
                     "verb": "previous-song",
-                    "iconUrl": "https://raw.githubusercontent.com/NumeroQuadro/goofy-ahh-spotify-plugin/master/img/playback-icons/left-arrow.png",
+                    "iconUrl": "https://raw.githubusercontent.com/NumeroQuadro/goofy-ahh-spotify-plugin/master/spotify-prev.svg",
                     "role": "Button"
                 },
                 {
