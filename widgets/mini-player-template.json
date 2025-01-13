@@ -34,28 +34,58 @@
             "horizontalAlignment": "Center"
         },
         {
-            "type": "ActionSet",
-            "actions": [
+            "type": "ColumnSet",
+            "spacing": "Medium",
+            "horizontalAlignment": "Center",
+            "columns": [
                 {
-                    "type": "Action.Execute",
-                    "verb": "previous-song",
-                    "iconUrl": "https://raw.githubusercontent.com/NumeroQuadro/goofy-ahh-spotify-plugin/master/img/playback-icons/spotify-prev.svg",
-                    "role": "Button"
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "url": "https://raw.githubusercontent.com/NumeroQuadro/goofy-ahh-spotify-plugin/master/img/playback-icons/spotify-prev.svg",
+                            "altText": "Previous",
+                            "selectAction": {
+                                "type": "Action.Execute",
+                                "verb": "previous-song"
+                            }
+                        }
+                    ]
                 },
                 {
-                    "type": "Action.Execute",
-                    "iconUrl": "https://raw.githubusercontent.com/NumeroQuadro/goofy-ahh-spotify-plugin/master/img/playback-icons/spotify-playing.svg",
-                    "verb": "toggle-playback",
-                    "role": "Button"
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "url": "https://raw.githubusercontent.com/NumeroQuadro/goofy-ahh-spotify-plugin/master/img/playback-icons/spotify-playing.svg",
+                            "altText": "Play/Pause",
+                            "selectAction": {
+                                "type": "Action.Execute",
+                                "verb": "toggle-playback"
+                            },
+                            "horizontalAlignment": "Center",
+                            "spacing": "Small"
+                        }
+                    ]
                 },
                 {
-                    "type": "Action.Execute",
-                    "verb": "next-song",
-                    "iconUrl": "https://raw.githubusercontent.com/NumeroQuadro/goofy-ahh-spotify-plugin/master/img/playback-icons/spotify-next.svg",
-                    "role": "Button"
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "url": "https://raw.githubusercontent.com/NumeroQuadro/goofy-ahh-spotify-plugin/master/img/playback-icons/spotify-next.svg",
+                            "altText": "Next",
+                            "selectAction": {
+                                "type": "Action.Execute",
+                                "verb": "next-song"
+                            }
+                        }
+                    ]
                 }
-            ],
-            "horizontalAlignment": "Center"
+            ]
         }
     ]
 }
