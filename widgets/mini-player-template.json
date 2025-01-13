@@ -59,7 +59,7 @@
                     "items": [
                         {
                             "type": "Image",
-                            "url": "https://raw.githubusercontent.com/NumeroQuadro/goofy-ahh-spotify-plugin/master/img/playback-icons/spotify-playing.svg",
+                            "url": "${isPlaying ? 'https://raw.githubusercontent.com/NumeroQuadro/goofy-ahh-spotify-plugin/master/img/playback-icons/spotify-playing.svg' : 'https://raw.githubusercontent.com/NumeroQuadro/goofy-ahh-spotify-plugin/master/img/playback-icons/spotify-play.svg'}",
                             "altText": "Play/Pause",
                             "selectAction": {
                                 "type": "Action.Execute",
