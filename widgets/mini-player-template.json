@@ -35,12 +35,11 @@
                     "type": "Action.Execute",
                     "verb": "previous-song",
                     "iconUrl": "https://raw.githubusercontent.com/NumeroQuadro/goofy-ahh-spotify-plugin/master/img/playback-icons/left-arrow.png",
-                    "role": "Button",
-                    "isEnabled": false
+                    "role": "Button"
                 },
                 {
                     "type": "Action.Execute",
-                    "title": "${isPlaying ? '⏸️' : '▶️'}",
+                    "title": "${isPlaying ? 'https://raw.githubusercontent.com/NumeroQuadro/goofy-ahh-spotify-plugin/master/img/playback-icons/play.png' : 'https://raw.githubusercontent.com/NumeroQuadro/goofy-ahh-spotify-plugin/master/img/playback-icons/pause.png'}",
                     "verb": "toggle-playback",
                     "role": "Button"
                 },
@@ -48,7 +47,6 @@
                     "type": "Action.Execute",
                     "verb": "next-song",
                     "iconUrl": "https://raw.githubusercontent.com/NumeroQuadro/goofy-ahh-spotify-plugin/master/img/playback-icons/right-arrow.png",
-                    "isEnabled": false,
                     "role": "Button"
                 }
             ]
