@@ -4,7 +4,7 @@
     "icons": [
         {
             "src": "https://raw.githubusercontent.com/NumeroQuadro/goofy-ahh-spotify-plugin/master/img/icon.png",
-            "sizes": "512x512",
+            "sizes": "640x640",
             "type": "image/png"
         }
     ],
