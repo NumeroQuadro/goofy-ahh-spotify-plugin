@@ -24,7 +24,7 @@
         },
         {
             "type": "Image",
-            "url": "albumArt",
+            "url": "${albumArt}",
             "size": "Medium",
             "altText": "Album Art"
         },
