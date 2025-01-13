@@ -90,11 +90,13 @@
                                 "type": "Action.Execute",
                                 "verb": "next-song"
                             },
+                            "horizontalAlignment": "Center",
                             "size": "Small"
                         }
                     ],
                     "selectAction": {
-                        "type": "Action.Execute"
+                        "type": "Action.Execute",
+                        "role": "Button"
                     }
                 }
             ]
