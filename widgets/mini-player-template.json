@@ -23,14 +23,14 @@
                     "wrap": true,
                     "horizontalAlignment": "Center"
                 }
-            ],
-            "spacing": "None"
+            ]
         },
         {
             "type": "Image",
             "url": "${albumArt}",
             "size": "Large",
             "altText": "Album Art",
+            "spacing": "Small",
             "horizontalAlignment": "Center"
         },
         {
@@ -53,7 +53,9 @@
                             }
                         }
                     ],
-                    "horizontalAlignment": "Center"
+                    "selectAction": {
+                        "type": "Action.Execute"
+                    }
                 },
                 {
                     "type": "Column",
@@ -65,12 +67,16 @@
                             "altText": "Play/Pause",
                             "selectAction": {
                                 "type": "Action.Execute",
-                                "verb": "toggle-playback",
-                                "role": "Button"
-                            }
+                                "verb": "toggle-playback"
+                            },
+                            "horizontalAlignment": "Center",
+                            "spacing": "Small"
                         }
                     ],
-                    "horizontalAlignment": "Center"
+                    "selectAction": {
+                        "type": "Action.Execute",
+                        "role": "Button"
+                    }
                 },
                 {
                     "type": "Column",
@@ -82,13 +88,14 @@
                             "altText": "Next",
                             "selectAction": {
                                 "type": "Action.Execute",
-                                "verb": "next-song",
-                                "role": "Button"
+                                "verb": "next-song"
                             },
                             "size": "Small"
                         }
                     ],
-                    "horizontalAlignment": "Center"
+                    "selectAction": {
+                        "type": "Action.Execute"
+                    }
                 }
             ]
         }
