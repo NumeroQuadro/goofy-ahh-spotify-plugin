@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"github.com/zmb3/spotify/v2"
 	spotifyauth "github.com/zmb3/spotify/v2/auth"
+	config "github.com/NumeroQuadro/goofy-ahh-spotify-widget/config"
 	"golang.org/x/oauth2"
 	"log"
 	"net/http"
@@ -35,7 +36,7 @@ func createHTTPClientWithProxy(proxyURL string) *http.Client {
 }
 
 func Auth(isProxyClient bool) *spotify.Client {
-	config, err := LoadConfig("tokens.json")
+	config, err := config.LoadConfig("tokens.json")
 	if err != nil {
 		log.Fatalf("Failed to load configuration: %v", err)
 	}

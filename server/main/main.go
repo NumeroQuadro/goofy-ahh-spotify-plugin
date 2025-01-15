@@ -3,11 +3,12 @@ package main
 import (
 	"context"
 	"fmt"
-	"github.com/NumeroQuadro/goofy-ahh-spotify-widget/api/middleware"
 	"io"
 	"log"
 	"net/http"
 	"os"
+
+	"github.com/NumeroQuadro/goofy-ahh-spotify-widget/api/middleware"
 )
 
 func main() {
@@ -27,7 +28,7 @@ func main() {
 	name := cp.Item.Name
 	albumCoverUrl := cp.Item.Album.Images[0].URL
 	fmt.Printf("Current Playing Track is: %s\n", name)
-	err = downloadImage(albumCoverUrl, "album_cover.jpg")
+	err = downloadImage(albumCoverUrl, "storage/files/album_cover.jpg")
 	if err != nil {
 		log.Fatalf("Failed to download image: %v", err)
 	}
