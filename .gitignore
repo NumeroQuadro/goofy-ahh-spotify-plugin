@@ -39,7 +39,6 @@ node_modules/
 /pkg/
 
 # Compiled binaries
-main
 *.o
 *.a
 
