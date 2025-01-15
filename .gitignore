@@ -44,4 +44,4 @@ main
 *.a
 
 # Exceptions for specific files or directories
-server/tokens.json    # Exclude tokens.json from being uploaded
+*.json    # Exclude tokens.json from being uploaded
