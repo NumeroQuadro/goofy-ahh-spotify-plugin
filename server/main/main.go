@@ -8,11 +8,13 @@ import (
 	"net/http"
 	"os"
 
+	fs "github.com/NumeroQuadro/goofy-ahh-spotify-widget/file-server"
+
 	"github.com/NumeroQuadro/goofy-ahh-spotify-widget/api/middleware"
 )
 
 func main() {
-	// Load configuration
+	fs.StartFileServer()
 	client := middleware.Auth(true)
 
 	user, err := client.CurrentUser(context.Background())
