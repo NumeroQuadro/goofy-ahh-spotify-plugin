@@ -19,7 +19,7 @@ var (
 	state = "abc123"
 )
 
-const redirectURI = "http://localhost:8080/callback"
+const redirectURI = "http://195.133.66.247:8080/callback" //"http://localhost:8080/callback"
 
 func createHTTPClientWithProxy(proxyURL string) *http.Client {
 	proxy, err := url.Parse(proxyURL)
