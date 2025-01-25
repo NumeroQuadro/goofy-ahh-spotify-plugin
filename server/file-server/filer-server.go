@@ -2,23 +2,19 @@ package fileserver
 
 import (
 	"fmt"
-	"log"
 	"net/http"
 )
 
 func StartFileServer() {
-	log.Println("Server started on: http://localhost:9000")
-	main_server := http.NewServeMux()
-
 	fileServer := http.NewServeMux()
 	fileServer.HandleFunc("/", fileServerFunc)
 
 	go func() {
-		log.Println("Server started on: http://localhost:9001")
-		http.ListenAndServe("localhost:9001", http.FileServer(http.Dir("./file-server/static")))
+		url := "0.0.0.0:9001"
+		dir := "./file-server/static"
+		fmt.Sprintln("Server started on: ", url, " and serving in ", dir, " directory")
+		http.ListenAndServe(url, http.FileServer(http.Dir(dir)))
 	}()
-
-	http.ListenAndServe("localhost:9000", main_server)
 }
 
 func fileServerFunc(w http.ResponseWriter, r *http.Request) {

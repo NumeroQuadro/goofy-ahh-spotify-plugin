@@ -44,7 +44,7 @@
                     "items": [
                         {
                             "type": "Image",
-                            "url": "https://raw.githubusercontent.com/NumeroQuadro/goofy-ahh-spotify-plugin/master/server/file-server/static/img/playback-icons/spotify-prev.png",
+                            "url": "http://localhost:9001/img/playback-icons/spotify-prev.png",
                             "altText": "Previous",
                             "selectAction": {
                                 "type": "Action.Execute",
@@ -64,7 +64,7 @@
                     "items": [
                         {
                             "type": "Image",
-                            "url": "https://raw.githubusercontent.com/NumeroQuadro/goofy-ahh-spotify-plugin/master/server/file-server/static/img/playback-icons/spotify-playing.png",
+                            "url": "http://localhost:9001/img/playback-icons/spotify-playing.png",
                             "altText": "Play/Pause",
                             "selectAction": {
                                 "type": "Action.Execute",
@@ -86,7 +86,7 @@
                     "items": [
                         {
                             "type": "Image",
-                            "url": "https://raw.githubusercontent.com/NumeroQuadro/goofy-ahh-spotify-plugin/master/server/file-server/static/img/playback-icons/spotify-next.png",
+                            "url": "http://localhost:9001/img/playback-icons/spotify-next.png",
                             "altText": "Next",
                             "selectAction": {
                                 "type": "Action.Execute",

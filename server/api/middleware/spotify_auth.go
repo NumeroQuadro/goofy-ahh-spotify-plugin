@@ -3,13 +3,14 @@ package middleware
 import (
 	"context"
 	"fmt"
-	"github.com/zmb3/spotify/v2"
-	spotifyauth "github.com/zmb3/spotify/v2/auth"
-	config "github.com/NumeroQuadro/goofy-ahh-spotify-widget/config"
-	"golang.org/x/oauth2"
 	"log"
 	"net/http"
 	"net/url"
+
+	config "github.com/NumeroQuadro/goofy-ahh-spotify-widget/config"
+	"github.com/zmb3/spotify/v2"
+	spotifyauth "github.com/zmb3/spotify/v2/auth"
+	"golang.org/x/oauth2"
 )
 
 var (
@@ -68,7 +69,7 @@ func Auth(isProxyClient bool) *spotify.Client {
 	http.HandleFunc("/callback", completeAuth(ctx))
 	go func() {
 		log.Println("Starting HTTP server on :8080")
-		err := http.ListenAndServe(":8080", nil)
+		err := http.ListenAndServe("172.21.100.179:8080", nil)
 		if err != nil {
 			log.Fatal(err)
 		}
