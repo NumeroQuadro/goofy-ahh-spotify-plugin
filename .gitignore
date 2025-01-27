@@ -1,0 +1,46 @@
+# Binaries for programs and plugins
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Test binary, test coverage files
+*.test
+*.out
+
+# Output of the dep tool
+vendor/
+
+# Logs and debug files
+*.log
+*.trace
+
+# IDE and editor specific files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary files
+*.tmp
+*.temp
+
+# Dependency directories
+node_modules/
+.DS_Store
+
+# Environment variables
+.env
+.env.*
+
+# Go-specific files
+/go/
+/bin/
+/pkg/
+
+# Compiled binaries
+*.o
+*.a
+
+# Exceptions for specific files or directories
+*.json    # Exclude tokens.json from being uploaded

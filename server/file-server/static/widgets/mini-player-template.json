@@ -1,0 +1,107 @@
+{
+    "type": "AdaptiveCard",
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.6",
+    "body": [
+        {
+            "type": "Container",
+            "items": [
+                {
+                    "type": "TextBlock",
+                    "text": "${songTitle}",
+                    "weight": "Bolder",
+                    "size": "Large",
+                    "wrap": true,
+                    "horizontalAlignment": "Center"
+                },
+                {
+                    "type": "TextBlock",
+                    "text": "${artistName}",
+                    "spacing": "Small",
+                    "size": "Default",
+                    "isSubtle": true,
+                    "wrap": true,
+                    "horizontalAlignment": "Center"
+                }
+            ]
+        },
+        {
+            "type": "Image",
+            "url": "${albumArt}",
+            "size": "Large",
+            "altText": "Album Art",
+            "spacing": "Small",
+            "horizontalAlignment": "Center"
+        },
+        {
+            "type": "ColumnSet",
+            "spacing": "Medium",
+            "horizontalAlignment": "Center",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "url": "http://localhost:9001/img/playback-icons/spotify-prev.png",
+                            "altText": "Previous",
+                            "selectAction": {
+                                "type": "Action.Execute",
+                                "verb": "previous-song",
+                                "role": "Button"
+                            }
+                        }
+                    ],
+                    "selectAction": {
+                        "type": "Action.Execute",
+                        "role": "Button"
+                    }
+                },
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "url": "http://localhost:9001/img/playback-icons/spotify-playing.png",
+                            "altText": "Play/Pause",
+                            "selectAction": {
+                                "type": "Action.Execute",
+                                "verb": "toggle-playback",
+                                "role": "Button"
+                            },
+                            "horizontalAlignment": "Center",
+                            "spacing": "Small"
+                        }
+                    ],
+                    "selectAction": {
+                        "type": "Action.Execute",
+                        "role": "Button"
+                    }
+                },
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "url": "http://localhost:9001/img/playback-icons/spotify-next.png",
+                            "altText": "Next",
+                            "selectAction": {
+                                "type": "Action.Execute",
+                                "verb": "next-song",
+                                "role": "Button"
+                            },
+                            "horizontalAlignment": "Center"
+                        }
+                    ],
+                    "selectAction": {
+                        "type": "Action.Execute",
+                        "role": "Button"
+                    }
+                }
+            ]
+        }
+    ]
+}
