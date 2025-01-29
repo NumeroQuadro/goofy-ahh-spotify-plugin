@@ -19,7 +19,7 @@ var (
 	state = "abc123"
 )
 
-const redirectURI = "http://195.133.66.247:8080/callback" //"http://localhost:8080/callback"
+const redirectURI = "http://localhost:8081/callback" //"http://localhost:8080/callback"
 
 func createHTTPClientWithProxy(proxyURL string) *http.Client {
 	proxy, err := url.Parse(proxyURL)
@@ -68,8 +68,8 @@ func Auth(isProxyClient bool) *spotify.Client {
 
 	http.HandleFunc("/callback", completeAuth(ctx))
 	go func() {
-		log.Println("Starting HTTP server on :8080")
-		err := http.ListenAndServe(":8080", nil)
+		log.Println("Starting HTTP server on :8081")
+		err := http.ListenAndServe(":8081", nil)
 		if err != nil {
 			log.Fatal(err)
 		}
