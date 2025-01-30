@@ -43,8 +43,6 @@ node_modules/
 *.a
 
 # Exceptions for specific files or directories
-*.json    # Exclude tokens.json from being uploaded
-
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
@@ -69,3 +67,4 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 yarn.lock
+server/tokens.json
