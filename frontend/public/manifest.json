@@ -3,7 +3,7 @@
     "description": "Spotify Player",
     "icons": [
         {
-            "src": "https://raw.githubusercontent.com/NumeroQuadro/goofy-ahh-spotify-plugin/master/server/file-server/static/img/dinosaur.png",
+            "src": "img/dinosaur.png",
             "sizes": "640x640",
             "type": "image/png"
         }
@@ -15,12 +15,12 @@
             "name": "Now playing",
             "description": "widget to control the Spotify music player",
             "tag": "spotify",
-            "ms_ac_template": "https://raw.githubusercontent.com/NumeroQuadro/goofy-ahh-spotify-plugin/master/server/file-server/static/widgets/mini-player-template.json",
-            "data": "https://raw.githubusercontent.com/NumeroQuadro/goofy-ahh-spotify-plugin/master/server/file-server/static/widgets/mini-player-data.json",
+            "ms_ac_template": "widgets/mini-player-template.json",
+            "data": "widgets/mini-player-data.json",
             "type": "application/json",
             "screenshots": [
                 {
-                    "src": "https://raw.githubusercontent.com/NumeroQuadro/goofy-ahh-spotify-plugin/master/server/file-server/static/widgets-example-screenshot.png",
+                    "src": "widgets-example-screenshot.png",
                     "sizes": "302x306",
                     "label": "The Spotify mini-player widget"
                 }

@@ -1,6 +1,6 @@
 {
     "songTitle": "006бесконечно",
     "artistName": "OG Buda",
-    "albumArt": "http://localhost:9001/img/szn.jpeg",
+    "albumArt": "http://localhost:3000/public/img/szn.jpeg",
     "isPlaying": true
 }
