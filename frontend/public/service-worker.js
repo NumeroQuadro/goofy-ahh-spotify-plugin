@@ -51,24 +51,48 @@ async function updateWidgets() {
 self.addEventListener('widgetclick', async (event) => {
   console.log('event in widget click looks like: ', event);
 
+  const widgetId = event.instanceId;
+
+  console.log('clients looks like this: ', clients);
+
+  const clientList = await clients.matchAll({ type: 'window', includeUncontrolled: true });
+  // Filter for clients with a visible window
+  if (clientList.length === 0) {
+    console.error('No active client available');
+  }
+
   switch (event.action) {
+    case 'toggle-playback':
+      clientList.forEach(client => client.postMessage({
+        type: 'resumePlayback',
+        widgetId: widgetId
+      }))
+      break;
     case 'log-in':
-      const widgetId = event.instanceId;
-      // Construct a dynamic URL; for example, add the widgetId as a query parameter
-      const loginUrl = `https://accounts.spotify.com/authorize?client_id=e26914f961ff4dae973623682b0e2eaf&state=${widgetId}&redirect_uri=http://localhost:3000/callback&scope=user-read-private%20user-read-email&response_type=code&show_dialog=true`;
-
-      console.log('Opening URL:', loginUrl);
-
+      console.log('log-in event triggered, calling clients...')
       // Open a new window/tab with the constructed URL.
       // clients.openWindow returns a promise.
-      await clients.openWindow(loginUrl);
+      await clientList.forEach(value => value.postMessage({
+        type: 'loginSpotify',
+        widgetId: widgetId
+      }))
       break;
 
     case 'previous-song':
-      // Application logic to play the previous song...
+      console.log('prev-song event triggered, calling clients...')
+
+      await clientList.forEach(value => value.postMessage({
+        type: 'prevSong',
+        widgetId: widgetId
+      }))
       break;
     case 'next-song':
-      // Application logic to play the next song...
+      console.log('next-song event triggered, calling clients...')
+      // Open a new window/tab with the constructed URL.
+      await clientList.forEach(value => value.postMessage({
+        type: 'nextSong',
+        widgetId: widgetId
+      }))
       break;
     default:
       return

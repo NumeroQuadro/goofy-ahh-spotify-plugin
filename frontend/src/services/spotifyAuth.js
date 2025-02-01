@@ -6,7 +6,7 @@ const CLIENT_SECRET = process.env.REACT_APP_SPOTIFY_CLIENT_SECRET
 const REDIRECT_URI = process.env.REACT_APP_SPOTIFY_REDIRECT_URI;
 
 export const getSpotifyAuthUrl = () => {
-    const scopes = ['user-read-private', 'user-read-email'];
+    const scopes = ['user-read-private', 'user-read-email', 'user-modify-playback-state', 'user-read-playback-state'];
     return `${SPOTIFY_AUTH_URL}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&scope=${scopes.join('%20')}&response_type=code&show_dialog=true`;
 };
 
