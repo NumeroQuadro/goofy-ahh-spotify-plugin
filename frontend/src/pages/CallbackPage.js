@@ -8,6 +8,8 @@ const CallbackPage = () => {
     useEffect(() => {
         const urlParams = new URLSearchParams(window.location.search);
         const code = urlParams.get('code');
+        const state = urlParams.get('state')
+        console.log('state: ', state)
 
         if (code) {
             getSpotifyToken(code).then((data) => {

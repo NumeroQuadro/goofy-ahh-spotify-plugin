@@ -44,7 +44,7 @@
                     "items": [
                         {
                             "type": "Image",
-                            "url": "http://localhost:3000/public/img/playback-icons/spotify-prev.png",
+                            "url": "https://raw.githubusercontent.com/NumeroQuadro/goofy-ahh-spotify-plugin/feat/restructure/frontend/public/img/playback-icons/spotify-prev.png",
                             "altText": "Previous",
                             "selectAction": {
                                 "type": "Action.Execute",
@@ -64,7 +64,7 @@
                     "items": [
                         {
                             "type": "Image",
-                            "url": "http://localhost:9001/publc/img/playback-icons/spotify-playing.png",
+                            "url": "https://raw.githubusercontent.com/NumeroQuadro/goofy-ahh-spotify-plugin/feat/restructure/frontend/public/img/playback-icons/spotify-playing.png",
                             "altText": "Play/Pause",
                             "selectAction": {
                                 "type": "Action.Execute",
@@ -86,7 +86,7 @@
                     "items": [
                         {
                             "type": "Image",
-                            "url": "http://localhost:9001/public/img/playback-icons/spotify-next.png",
+                            "url": "https://raw.githubusercontent.com/NumeroQuadro/goofy-ahh-spotify-plugin/feat/restructure/frontend/public/img/playback-icons/spotify-next.png",
                             "altText": "Next",
                             "selectAction": {
                                 "type": "Action.Execute",
@@ -100,8 +100,33 @@
                         "type": "Action.Execute",
                         "role": "Button"
                     }
+                },
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "url": "https://raw.githubusercontent.com/NumeroQuadro/goofy-ahh-spotify-plugin/feat/restructure/frontend/public/img/dinosaur.png",
+                            "altText": "LoginButton",
+                            "selectAction": {
+                                "type": "Action.Execute",
+                                "verb": "log-in",
+                                "role": "Button"
+                            },
+                            "horizontalAlignment": "Center",
+                            "size": "Small"
+                        }
+                    ],
+                    "selectAction": {
+                        "type": "Action.Execute",
+                        "role": "Button"
+                    },
+                    "horizontalAlignment": "Left",
+                    "spacing": "Large"
                 }
-            ]
+            ],
+            "style": "default"
         }
     ]
 }

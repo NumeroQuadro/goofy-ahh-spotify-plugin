@@ -2,6 +2,7 @@
 self.addEventListener("widgetinstall", event => {
   // The widget just got installed, render it using renderWidget.
   // Pass the event.widget object to the function.
+  console.log('widget is trying to load!');
   event.waitUntil(renderWidget(event.widget));
 });
 
@@ -25,28 +26,52 @@ self.addEventListener("activate", event => {
 });
 
 async function updateWidgets() {
-  // Get the widget that match the tag defined in the web app manifest.
-  const widget = await self.widgets.getByTag("spotify");
-  if (!widget) {
+  if (!self.widgets || typeof self.widgets.getByTag !== 'function') {
+    console.error("Widgets API is not available. Are you running on a supported Windows 11 environment with the latest Edge?");
     return;
   }
-
-  // Using the widget definition, get the template and data.
-  const template = await (await fetch(widget.definition.msAcTemplate)).text();
-  const data = await (await fetch(widget.definition.data)).text();
-
-  // Render the widget with the template and data.
-  await self.widgets.updateByTag(widget.definition.tag, { template, data });
+  // Get the widget that match the tag defined in the web app manifest.
+  try {
+    const widget = await self.widgets.getByTag("spotify");
+    if (!widget) {
+      console.log('WIDGET IS NULL');
+      return;
+    }
+    // Using the widget definition, get the template and data.
+    const template = await (await fetch(widget.definition.msAcTemplate)).text();
+    const data = await (await fetch(widget.definition.data)).text();
+    // Render the widget with the template and data.
+    await self.widgets.updateByTag(widget.definition.tag, { template, data });
+  } catch (err) {
+    console.error('getting widget by tag cannot be completed!', err);
+  }
 }
 
-self.addEventListener('widgetclick', (event) => {
+
+self.addEventListener('widgetclick', async (event) => {
+  console.log('event in widget click looks like: ', event);
+
   switch (event.action) {
+    case 'log-in':
+      const widgetId = event.instanceId;
+      // Construct a dynamic URL; for example, add the widgetId as a query parameter
+      const loginUrl = `https://accounts.spotify.com/authorize?client_id=e26914f961ff4dae973623682b0e2eaf&state=${widgetId}&redirect_uri=http://localhost:3000/callback&scope=user-read-private%20user-read-email&response_type=code&show_dialog=true`;
+
+      console.log('Opening URL:', loginUrl);
+
+      // Open a new window/tab with the constructed URL.
+      // clients.openWindow returns a promise.
+      await clients.openWindow(loginUrl);
+      break;
+
     case 'previous-song':
       // Application logic to play the previous song...
       break;
     case 'next-song':
       // Application logic to play the next song...
       break;
+    default:
+      return
   }
 });
 

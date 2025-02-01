@@ -15,9 +15,8 @@
             "name": "Now playing",
             "description": "widget to control the Spotify music player",
             "tag": "spotify",
-            "ms_ac_template": "widgets/mini-player-template.json",
-            "data": "widgets/mini-player-data.json",
-            "type": "application/json",
+            "ms_ac_template": "/widgets/mini-player-template.json",
+            "data": "/widgets/mini-player-data.json",
             "screenshots": [
                 {
                     "src": "widgets-example-screenshot.png",
@@ -25,8 +24,8 @@
                     "label": "The Spotify mini-player widget"
                 }
             ],
-            "auth": false,
-            "update": 1
+            "auth": true,
+            "update": 60
         }
     ]
 }
